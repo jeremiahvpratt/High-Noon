@@ -1,18 +1,24 @@
 //server.js
 //manages our database requests!
 
+// import express from 'express';
+// import bodyParser from 'body-parser';
+// import logger from 'morgan';
+// import mongoose from 'mongoose';
+// import { getSecret } from './secrets';
+// import Comment from './models/comment';
 var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
-var getSecret = require('./secrets');
+var DBURI = require('./secrets');
 var Selection = require('./models/selection');
 
 const app = express();
 const router = express.Router();
 
 const API_PORT = process.env.API_PORT || 3001;
-mongoose.connect(getSecret('dbUri'));
+mongoose.connect(DBURI);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
