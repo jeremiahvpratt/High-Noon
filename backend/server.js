@@ -1,24 +1,18 @@
 //server.js
 //manages our database requests!
 
-// import express from 'express';
-// import bodyParser from 'body-parser';
-// import logger from 'morgan';
-// import mongoose from 'mongoose';
-// import { getSecret } from './secrets';
-// import Comment from './models/comment';
-var express = require("express");
-var bodyParser = require("body-parser");
-var logger = require("morgan");
-var mongoose = require("mongoose");
-var DBURI = require('./secrets');
-var Selection = require('./models/selection');
+import express from 'express';
+import bodyParser from 'body-parser';
+import logger from 'morgan';
+import mongoose from 'mongoose';
+import { getSecret } from './secrets';
+import Selection from './models/selection';
 
 const app = express();
 const router = express.Router();
 
 const API_PORT = process.env.API_PORT || 3001;
-mongoose.connect(DBURI);
+mongoose.connect(getSecret('dbUri'));
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
@@ -34,15 +28,15 @@ router.get('/responses', (req, res) => {
 });
 router.post('/responses', (req, res) => {
   const response = new Selection();
-
-  if(!req.body.selection){
-    return res.json({
-      success: false,
-      error: 'you must provide a response'
-    });
-  }
-  response.selection = req.body.selection;
+  response.selection = req.body.question;
+  response.time = Date(Date.now()).toString();
   response.save(err => {
+    if (err) return res.json({ success: false, error: err});
+    return res.json({ success: true});
+  });
+});
+router.delete('/responses', (req, res) => {
+  Selection.remove({}, (err) => {
     if (err) return res.json({ success: false, error: err});
     return res.json({ success: true});
   });

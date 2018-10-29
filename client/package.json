@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "eslint": "^5.6.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-markdown": "^4.0.3",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.5",
     "whatwg-fetch": "^3.0.0"
   },
@@ -26,7 +28,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0"
-  }
+  },
+  "proxy": "http://98.14.67.49:3001"
 }
