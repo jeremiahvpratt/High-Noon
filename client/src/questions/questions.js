@@ -7,7 +7,6 @@ const QUESTIONS = [
   {_id: 6, question: 'Jubilee'},
   {_id: 7, question: 'Then'},
  {_id: 8, question: 'Eleven'},
-	
 ];
 
 export default QUESTIONS;

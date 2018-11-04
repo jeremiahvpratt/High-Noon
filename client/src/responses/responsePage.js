@@ -27,7 +27,12 @@ class ResponsePage extends Component {
 
   loadResponsesFromServer = () => {
 
-    fetch('/api/responses')
+    fetch('/api/responses', {
+        headers : {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }
+       })
       .then(data => data.json())
       .then((res) => {
         if (!res.success) this.setState({ error: res.error});
