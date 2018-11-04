@@ -5,7 +5,7 @@ const Response = props => (
   <div className="singleResponse">
     <div className="textContent">
       <div className="singleResponseContent">
-        <p>{props.response} ............ {props.time}</p>
+        <p>{props.response} — {props.time.slice(0,props.time.indexOf(':')+6)}</p>
       </div>
     </div>
   </div>

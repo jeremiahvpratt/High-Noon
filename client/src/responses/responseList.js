@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 import Response from './response';
 
 const ResponseList = (props) => {
-  const responseNodes = props.data.map(r => (
+  const sorted = props.data.slice().sort(function (a,b) {
+    return a['time'] > b['time'] ? -1 : 1;
+  });
+  //const responseNodes = props.data.map(r => (
+  const responseNodes = sorted.map(r => (
     <Response
       key={r._id} id={r._id}
       response={r.selection}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import QuestionList from './questionList';
 import QUESTIONS from './questions';
+import './questionPage.css';
 
 class QuestionPage extends Component {
   constructor() {

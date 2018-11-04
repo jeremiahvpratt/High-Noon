@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Question from './question';
+import shuffle from '../helperFunctions';
 
 const QuestionList = (props) => {
-  const questionNodes = props.data.map(q => (
+
+  const shuffled = shuffle(props.data);
+  //const questionNodes = props.data.map(q => (
+  const questionNodes = shuffled.map(q => (
     <Question
       key={q._id} id={q._id}
       question={q.question}

@@ -3,6 +3,9 @@ const QUESTIONS = [
   {_id: 2, question: 'Four'},
   {_id: 3, question: 'After'},
   {_id: 4, question: 'Late'},
+  {_id: 5, question: 'Morning'},
+  {_id: 6, question: 'Jubilee'},
+  {_id: 7, question: 'Then'},
 ];
 
 export default QUESTIONS;
