@@ -29,6 +29,6 @@
   ],
   "devDependencies": {
     "eslint": "^5.8.0"
-  },
-  "proxy": "http://98.14.67.49:3001"
+  }
+ 
 }
