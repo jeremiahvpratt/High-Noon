@@ -22,7 +22,7 @@ class QuestionPage extends Component {
     return (
       <div className="container">
         <div className="questions">
-          <h2>Would You Look at the Time:</h2>
+          <h1>Would You Look at the Time:</h1>
           <QuestionList
             data={QUESTIONS}
             sendResponse={this.onSubmitResponse} />

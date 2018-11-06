@@ -7,9 +7,21 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fffbef;
 }
 .singleQuestionContent {
   cursor:'pointer';
+}
+h1 {
+  color: #ff4941;
+}
+p {
+  color: #ff4941;
+  font-size: 130%;
+}
+a{
+  color: #ff4941;
+  font-size: 130%;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

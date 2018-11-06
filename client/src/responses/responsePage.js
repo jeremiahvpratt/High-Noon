@@ -52,7 +52,7 @@ class ResponsePage extends Component {
     return (
       <div className="container">
         <div className="responses">
-          <h2>Look!</h2>
+          <h1>Look!</h1>
           <p onClick={() => this.clearResponses()}>remember?</p>
           <ResponseList data={this.state.data} />
         </div>
