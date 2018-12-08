@@ -2,46 +2,55 @@
 /* CSS Document */
 
 body {
-font-family: ;
 color: #665544;
-padding: 0px;
   background-color: #fffbef;
+  margin: 0;
+  cursor:'pointer';
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
 
 .caption {
 	margin-top: 0px;
 }
-
-p {
-width: 300px;
-padding: 50px;
-border: 40px solid #0088dd;}
-
-* .page {
-border: 0px solid #fffbef;
-background-color: #fffbef;
-padding: inherit;}
-
 h1 {
-	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	font-size: 60pt;
-	border-width: 30px;
-	text-align: left;
-	color:#ff493f}
-
-h2 {
-	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	font-size: 40pt;
-	border-width: 5px;
-	text-align: center;
-	color:#E62629}
-
-h3 {
-	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	font-size: 20pt;
-	border-width: 5px;
-	text-align: center;
-	color:#E62629}
-
-a {text-decoration: none
+  color: #ff4941;
 }
+p{
+  color: #ff4941;
+  font-size: 130%;
+}
+
+a{
+  color: #ff4941;
+  font-size: 130%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+* {
+
+  }
+  .questionBody{
+    padding: 100px;
+  }
+  .imgbox {
+    text-align: center;
+    height: 99%;
+  }
+  .center-fit {
+    width: auto;
+    max-height: 100vh;
+    margin: 0;
+  }
+  .page {
+border: 0px solid #fffbef;
+background-color: #fffbef;}

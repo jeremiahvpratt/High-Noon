@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import './home.css';
+import './later-1.png';
 
 class Home extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="imgbox">
         <a href="/time-1">
-        <img src="later-1.png" width="100%" height="100%" alt/>
+        <img class="center-fit" src={require('./later-1.png')} alt=""/>
         </a>
       </div>
     );

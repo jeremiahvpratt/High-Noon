@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import QuestionList from './questionList';
 import QUESTIONS from './questions';
-import './questionPage.css';
 
 class QuestionPage extends Component {
   constructor() {
@@ -20,9 +19,9 @@ class QuestionPage extends Component {
   }
   render() {
     return (
-      <div className="container">
-        <div className="questions">
-          <h1>Would You Look at the Time:</h1>
+      <div class="questionBody">
+        <div>
+          <h1>When?</h1>
           <QuestionList
             data={QUESTIONS}
             sendResponse={this.onSubmitResponse} />
