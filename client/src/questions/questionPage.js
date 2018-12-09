@@ -21,7 +21,7 @@ class QuestionPage extends Component {
     return (
       <div class="questionBody">
         <div>
-          <h1>When?</h1>
+          <img src={require('./let.png')} alt="" height="42" width="auto" />
           <QuestionList
             data={QUESTIONS}
             sendResponse={this.onSubmitResponse} />

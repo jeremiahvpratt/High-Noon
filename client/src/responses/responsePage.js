@@ -51,9 +51,11 @@ class ResponsePage extends Component {
   render() {
     return (
       <div class="questionBody">
-          <h1>Look!</h1>
-          <p onClick={() => this.clearResponses()}>remember?</p>
           <ResponseList data={this.state.data} />
+          <img src={require('./high-noon-illustrations-09.png')} alt="" class="hourFix" onClick={() => this.clearResponses()}/>
+          <a href="/">
+            <img src={require('./high-noon-illustrations-10.png')} alt="" class="houseFix" />
+          </a>
       </div>
     );
   }
