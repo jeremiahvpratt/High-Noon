@@ -4,7 +4,7 @@ import Response from './response';
 
 const ResponseList = (props) => {
   const sorted = props.data.slice().sort(function (a,b) {
-    return a['time'] > b['time'] ? -1 : 1;
+    return a['updatedAt'] > b['updatedAt'] ? -1 : 1;
   });
   //const responseNodes = props.data.map(r => (
   const responseNodes = sorted.map(r => (

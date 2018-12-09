@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Question = props => (
   <div>
-    <div>
+    <div className="linkPadding">
         <a
           href='look'
           onClick={() => {props.sendResponse(props.question)}}
