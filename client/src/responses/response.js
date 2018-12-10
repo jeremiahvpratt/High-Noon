@@ -5,7 +5,7 @@ const Response = props => (
   <div>
     <div>
       <div>
-        <p>{props.response} — {props.time.slice(0,props.time.indexOf(':')+6)}</p>
+        <p>{props.response} — {props.time.slice(0,props.time.indexOf(':')+6).toLowerCase()}</p>
       </div>
     </div>
   </div>
